@@ -1,4 +1,4 @@
-def count_common_elements(*lists):
+def count_common_elements(lists):
     if len(lists) < 2:
         return 0
 
@@ -9,15 +9,16 @@ def count_common_elements(*lists):
 
     return len(common_elements)
 
-# Получение количества списков от пользователя
-n = int(input("Введите количество списков: "))
+def main():
+    # Получение количества списков от пользователя
+    n = int(input("Введите количество списков: "))
 
-# Получение элементов каждого списка
-lists = []
-for i in range(n):
-    elements = input(f"Введите элементы {i + 1}-го списка через пробел: ").split()
-    lists.append(elements)
+    # Получение элементов каждого списка
+    lists = []
+    for i in range(n):
+        elements = input(f"Введите элементы {i + 1}-го списка через пробел: ").split()
+        lists.append(elements)
 
-# Вызов функции count_common_elements
-common_count = count_common_elements(*lists)
-print(f"Количество одинаковых элементов в списках: {common_count}")
+    # Вызов функции count_common_elements
+    common_count = count_common_elements(lists)
+    print(f"Количество одинаковых элементов в списках: {common_count}")
